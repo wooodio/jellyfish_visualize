@@ -1,0 +1,42 @@
+{
+    "jeju_related_info": [
+        {
+            "species": "노무라입깃해파리",
+            "density": "고밀도",
+            "location": "- 제주 제주시 제주항 연안"
+        },
+        {
+            "species": "노무라입깃해파리",
+            "density": "저밀도",
+            "location": "- 제주 제주시 차귀도 연안"
+        },
+        {
+            "species": "노무라입깃해파리",
+            "density": "저밀도",
+            "location": "- 제주 제주시 월령포구 연안"
+        },
+        {
+            "species": "노무라입깃해파리",
+            "density": "저밀도",
+            "location": "- 제주 제주시 도두항 연안"
+        },
+        {
+            "species": "노무라입깃해파리",
+            "density": "저밀도",
+            "location": "- 제주 제주시 성산포항 연안"
+        },
+        {
+            "species": "오이빗해파리",
+            "density": "저밀도",
+            "location": "- 제주 제주시 월령포구 연안"
+        }
+    ],
+    "jeju_special_warning": [
+        "제주 해역 노무라입깃해파리 주의 특보 발령(07.05.)"
+    ],
+    "jeju_appearance_rate": {
+        "노무라입깃해파리": "71.4%",
+        "보름달물해파리": "0%",
+        "기타 해파리": "14.3%"
+    }
+}
