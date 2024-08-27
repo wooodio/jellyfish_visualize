@@ -3,7 +3,7 @@ import re
 import json
 
 # PDF 파일 열기
-path = r"C:\Users\wjg\Desktop\해파리\24.08.14_해파리+주간보고(15차) (1).pdf"
+path = r"C:\Users\wjg\Desktop\해파리\24.08.22+해파리+주간보고(16차).pdf"
 doc = fitz.open(path)
 
 # 추출한 텍스트를 담을 변수
@@ -29,7 +29,8 @@ species_patterns = {
     "유령해파리": r"유령해파리",
     "커튼원양해파리": r"커튼원양해파리",
     "기수식용해파리": r"기수식용해파리",
-    "오이빗해파리": r"오이빗해파리"
+    "오이빗해파리": r"오이빗해파리",
+    "평면해파리": r"평면해파리",
 }
 
 # 고밀도, 저밀도 출현 여부를 구분하는 패턴
@@ -66,13 +67,15 @@ for species, species_pattern in species_patterns.items():
         matches = re.findall(pattern, all_text)
         
         if matches:
-            if species in ["노무라입깃해파리", "오이빗해파리"]:
+            if species in ["노무라입깃해파리", "오이빗해파리","평면해파리"]:
                 jeju_matches = re.findall(r"- 제주[^\n]+", matches[0])
             else:
                 jeju_matches = re.findall(r"- 제주[^\n]+", matches[1]) if len(matches) > 1 else []
                 
             if jeju_matches:
                 for jeju_match in jeju_matches:
+                    jeju_match = jeju_match.strip()
+                    jeju_match = jeju_match.split()[-2]+ ' ' + jeju_match.split()[-1]
                     jeju_related_info.append({
                         "species": species,
                         "density": density,
